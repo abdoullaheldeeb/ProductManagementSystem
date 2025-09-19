@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="crud">
+        <div class="head">
+          <h2>Crus</h2>
+          <p>Product Management System</p>
+        </div>
+        <div class="inputs">
+          <input placeholder="title" type="text" id="title" />
+          <div class="price">
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="price"
+              placeholder="price"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="taxes"
+              placeholder="taxes"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="ads"
+              placeholder="ads"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="discount"
+              placeholder="discount"
+            />
+            <small id="total"></small>
+          </div>
+          <input placeholder="count" type="number" id="count" />
+          <input placeholder="category" type="text" id="category" />
+          <button id="submit">Create</button>
+        </div>
+        <div class="outputas">
+          <div class="searchblock">
+            <input
+              onkeyup="searchData(this.value)"
+              type="text"
+              id="search"
+              placeholder="Search"
+            />
+            <div class="btnSearch">
+              <button onclick="getSearcMood(this.id)" id="searchTitle">
+                Search By Titel
+              </button>
+              <button onclick="getSearcMood(this.id)" id="searchCategory">
+                Search By Category
+              </button>
+            </div>
+          </div>
+          <div id="deleteAll"></div>
+          <div class="overflow">
+            <table>
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>totle</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start Footer -->
+    <footer>
+     <p class="copyright">&copy; 2024 <span><a href="https://www.eldeebsoftware.online" class="btnn" target="_blank">ELdeeb Software</a></span> All Right Reserved</p>
+    </footer>
+    <!-- End Footer -->
+    <script src="./main.js"></script>
+  </body>
+</html>
